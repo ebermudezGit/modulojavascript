@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Inicios en JavaScript</title>
+</head>
+<body>
+	
+	<h1>inicios en Javascript</h1>
+	<p>Aqui viene lo visto en clase</p>
+
+	<h3>Usando javascript en nuestro proyecto</h3>
+	<h4>De manera externa</h4>
+	<p>
+
+	</p>
+
+	<h4>De manera interna</h4>
+	<p>
+		Escribiendo código js
+		directamente en nuestra
+		pagina, dentro de la etiqueta
+		< script>
+	</p>
+	<pre>
+		< script>
+			var nombre="pepe"
+			function saludo(....
+		< script>
+	</pre>
+
+	<h3>Comentarios</h3>
+	<p>
+		Existen dos formas los que se escriben en una sola línea y los que ocupan varias líneas.
+	</p>
+	<pre>
+		// comentario de una linea
+
+		/* Los comentarios de varias líneas son muy útiles
+		cuando se necesita incluir bastante información
+		en los comentarios */
+	</pre>
+
+	<h3>Alert</h3>
+	<p>alert("Hola mundo")</p>
+
+	<h3>metodos en un boton</h3>
+	<p>
+		<pre>
+			function Validar(){
+				confirm("Llamada de function");
+			};
+		</pre>
+	</p>
+	<input type="button" value="Valida javaScript" onclick="Validar()">
+
+	<h3>Variables</h3>
+	<p>
+		La variables se declaran y asigna de la sigueinte manera
+	</p>
+	<pre>
+		var mensaje = "Este el el mensaje"
+	</pre>		
+	<p>
+		Tambien se pueden declarar varias variables en una sola linea.
+	</p>
+	<pre>
+		var person = "John Doe", carName = "Volvo", price = 200;
+	</pre>
+
+	<h3>tipos de Datos</h3>
+	<p>
+		Los tipos de datos encontrados en JavaScript son los siguientes:
+	</p>
+	<ul>
+		<li>Number</li>
+		<li>String</li>
+		<li>Boolean</li>
+		<li>Array</li>
+		<li>Object</li>
+	</ul>
+
+	<h3>Uso de typeof, que tipo de dato es la varable</h3>
+	<p>
+		typeof(“hola");
+		typeof(variable);
+	</p>
+	
+
+	<h3>Conversion de tipos de datos</h3>
+	<p>A esto se le suele llamar parsing</p>
+
+	<pre>
+		var num = 2;
+		typeof(num.toString());
+	</pre>
+
+	<h3>
+		OPERADORES
+	</h3>
+	<p>Los operadores se dividen en:</p>
+	
+	<ol>
+		<li>Operadores aritméticos</li>
+		<li>Operadores de asignación</li>
+		<li>Operadores de comparación</li>
+		<li>Operadores lógicos</li>
+		<li>Concatenación</li>
+	</ol>
+
+	<h3>OPERADORES ARITMÉTICOS</h3>
+	
+	<ul>
+		<li>Suma</li>
+		<li>Resta</li>
+		<li>Multiplicación</li>
+		<li>División</li>
+		<li>Modulo</li>
+	</ul>
+
+	<h3>OPERADORES DE ASIGNACIÓN</h3>
+	
+	<ul>
+		<li>=</li>
+		<li>++</li>
+		<li>--</li>
+		<li>+=</li>
+		<li>-=</li>
+	</ul>
+	
+
+	<h3>OPERADORES DE COMPARACIÓN</h3>
+	<ul>
+		<li>>, >=</li>
+		<li><, <=</li>
+		<li>==, !=</li>
+		<li>===, !==</li>
+	</ul>
+
+	<h3>Concatenacion</h3>
+	<p>
+		La concatenación permiteunir 2 strings como si fuesen sólo uno.
+	</p>
+	<p>
+		La suma de un entero con un string tiene como resultado un string.
+	</p>
+
+	<h3>CONVERSIÓN IMPLÍCITA</h3>
+	<pre>
+		a = 2 + "hola";
+		console.log(a);
+	</pre>
+
+	<h4>¿CUÁL ES EL PROBLEMA DE LA CONVERSIÓN IMPLÍCITA?</h4>
+	<pre>
+		var num = prompt("Ingresa un Numero");
+		alert(num + 2);
+	</pre>
+	<p>¿Si el usuario ingresa 2, cuál será la respuesta?</p>
+
+	<h4>CÓMO LO RESOLVEMOS?</h4>
+	<p>Utilizando parser, en este caso parseInt(“string”)</p>
+	<pre>
+		var num = prompt("Ingresa un Numero");
+		num = parseInt(num);
+		alert(num + 2);
+	</pre>
+
+	<p>Podemos hacer lo mismo compactando el codigo</p>
+
+	<pre>
+		var num = parseInt(prompt("Ingresa un Numero"));
+		alert(num + 2);
+	</pre>
+
+	<h3>OPERADORES LÓGICOS</h3>
+	<ul>
+		<li>&& (and)</li>
+		<li>|| (or)</li>
+		<li>! (not)</li>
+	</ul>
+
+	<h3>CONDICIONES: IF</h3>
+	<pre>
+		var edad = 19;
+		if(edad >= 18){
+			alert("Eres Mayor de Edad");
+		}
+	</pre>
+
+	<h3>CONDICIONES: IF ELSE</h3>
+	<pre>
+		var edad = 19;
+		if(edad >= 18){
+			alert("Eres Mayor de Edad");
+		}else{
+			alert("No eres Mayor de Edad");
+		}
+	</pre>
+
+	<h3>CONDICIONES: ELSE IF</h3>
+	<pre>
+		var edad = 21;
+		if(edad < 13{
+			alert("Eres un niño");
+		}else if(edad < 18){
+			alert("Eres un adolecente");
+		}else{
+			alert("Eres un adulto");
+		}
+	</pre>
+
+	<h3>CONDICIONES: OPERADOR TERNARIO</h3>
+	<p>
+		El operador ternario es otra forma de escribir una condición if else pero con menos código, la lógica es la siguiente:
+	</p>
+	<pre>
+		condicion ? Verdadero : Falso
+
+		var edad=19;
+		var resultado = edad >=18 ? "Eres mayor de Edad" : "No Eres mayor de Edad":
+		alert(resultado);
+
+	</pre>
+
+	<h2>Bucles</h2>
+
+	<h3>DO…WHILE</h3>
+
+	<h3>WHILE</h3>
+
+	<h3>FOR</h3>
+	<p>
+		Crea un bucle que consta de tres expresiones opcionales,encerrados entre paréntesis y separados por punto y coma,seguido de una sentencia ejecutada en el bucle.
+	</p>
+	<p>Sintaxsis:</p>
+	<pre>
+		for(Inicializacion,Condicion,Incremento){
+			Declareaciones
+		}
+	</pre>
+	<p>Ejemplo</p>
+	<pre>
+		var numero = prompt("Ingresa un numero para Factorial");
+
+		var factorial =1;
+		for (var i = 1; i <= numero; i++) {
+		 	factorial=factorial*i;
+		}
+
+	 	alert("El factorial de "+ numero+" es: "+factorial);
+	</pre>
+	<input type="button" value="Valida For javaScript" onclick="ValidarFor()">
+
+
+	<h2>Funciones</h2>
+	<p>
+		Cuando se desarrolla una aplicación compleja, es muy habitual utilizar una y otra vez las mismas instrucciones. Un script para una tienda de comercio electrónico por ejemplo, tiene que calcular el precio total de los productos varias veces, para añadir los impuestos y los gastos de envío.
+	</p>
+	<p>
+		Las funciones se recomiendan usar cuando se vaya a reutilizar el codigo.
+	</p>
+	<p>Veamos el siguiente codigo.</p>
+
+	<pre>
+		var resultado=0;
+		var numero1 = 3;
+		var numero2 = 5;
+				
+		//	Se	suman	los	números	y	se	muestra	el	resultado
+		resultado = numero1 + numero2;
+		alert("El	resultado	es	" + resultado);
+				
+		numero1 = 10;
+		numero2 = 7;
+				
+		//	Se	suman	los	números	y	se	muestra	el	resultado	
+		resultado = numero1 + numero2;
+		alert("El	resultado	es	" + resultado);
+				
+		numero1 = 5;
+		numero2 = 8;
+				
+		//	Se	suman	los	números	y	se	muestra	el	resultado
+		resultado = numero1 + numero2;
+		alert("El	resultado	es	" + resultado);
+	</pre>
+	<input type="button" value="Ejecutar Codigo" onclick="fncodigosinfuncion()">
+	<p>Ahora lo hagamos con funciones.</p>
+	<pre>
+	
+		function fntestSuma(numero1,numero2) {
+			var resultado=0;
+			
+			resultado = numero1 + numero2;
+			alert("El resultado es " + resultado);
+		}
+
+		var numero1 = 3;
+		var numero2 = 5;
+				
+		//	Se	suman	los	números	y	se	muestra	el	resultado
+		fntestSuma(numero1,numero2);
+				
+		numero1 = 10;
+		numero2 = 7;
+				
+		//	Se	suman	los	números	y	se	muestra	el	resultado	
+		fntestSuma(numero1,numero2);
+				
+		numero1 = 5;
+		numero2 = 8;
+				
+		//	Se	suman	los	números	y	se	muestra	el	resultado
+		fntestSuma(numero1,numero2);
+
+	</pre>
+	<input type="button" value="Ejecutar Codigo" onclick="fncodigosinfuncion()">
+
+	<script type="text/javascript" src="javascript/main.js"></script>
+
+</body>
+</html>
