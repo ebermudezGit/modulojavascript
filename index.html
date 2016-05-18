@@ -330,10 +330,41 @@
 		}
 
 	</pre>
+	<input type="button" value="Ejecutar Codigo" onclick="fncodigoconfuncionprompt()">
 	<P>
 		En este caso se usa el PerseInt por que el prompt retorna las variables como string.
 	</P>
-	<input type="button" value="Ejecutar Codigo" onclick="fncodigoconfuncionprompt()">
+
+	<h3>Retorno de valores en una function</h3>
+	<p>
+		Las funciones no solamente pueden recibir variables y datos, sino que también pueden devolver los valores que han calculado. Para esto se utiliza la palabra reservada return.
+	</p>
+	<p>
+		Es importante saber que aunque las funciones pueden devolver valores de cualquier tipo, solamente pueden devolver un valor cada vez.
+	</p>
+	<p>
+		Veamos un Ejemplo:
+	</p>
+	<pre>
+		function calculaPrecioTotal(precio)	{	
+				var impuestos = 1.19;
+				var gastosEnvio = 1.05;
+				var total = (	precio * impuestos	) + gastosEnvio;
+				return total;
+		}
+				
+		var precioTotal = calculaPrecioTotal(15900);
+		alert("Precio Total:" + precioTotal);
+
+		//	Seguir	trabajando	con	la	variable	"precioTotal"
+
+	</pre>
+
+	<input type="button" value="Ejecutar Codigo" onclick="fnfuncionconretorno()">
+
+
+
+	
 
 	<script type="text/javascript" src="javascript/main.js"></script>
 

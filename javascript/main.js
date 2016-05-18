@@ -75,3 +75,15 @@ function fncodigoconfuncionprompt() {
 	fntestSuma(numero1,numero2);
 	
 }
+
+function calculaPrecioTotal(precio)	{	
+		var impuestos = 1.19;
+		var gastosEnvio = 1.05;
+		var total = (	precio * impuestos	) + gastosEnvio;
+		return total;
+}
+
+function fnfuncionconretorno() {
+	var precioTotal = calculaPrecioTotal(15900);
+	alert("Precio Total:" + precioTotal);
+}
