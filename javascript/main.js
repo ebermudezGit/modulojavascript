@@ -66,3 +66,12 @@ function fncodigoconfuncion() {
 	fntestSuma(numero1,numero2);
 	
 }
+
+function fncodigoconfuncionprompt() {
+	var numero1 = parseInt(prompt("Primer Numero"));
+	var numero2 = parseInt(prompt("segundo Numero"));;
+	
+	//	Se	suman	los	números	y	se	muestra	el	resultado
+	fntestSuma(numero1,numero2);
+	
+}
